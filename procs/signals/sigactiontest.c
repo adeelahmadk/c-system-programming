@@ -7,9 +7,12 @@ void handler(int num) {
 }
 
 int main() {
-    signal(SIGINT, handler);
-    signal(SIGTERM, handler);   // only dies with SIGKILL
- 
+    struct sigaction sa;
+    sa.sa_handler = handler;
+
+    sigaction(SIGINT, &sa, NULL);
+    sigaction(SIGTERM, &sa, NULL);
+
     while (1) {
         printf("waisting your cycles: %d\n", getpid());
         sleep(1);
