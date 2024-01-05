@@ -20,9 +20,15 @@ void yourturn() {
 
 int main(int argc, char *argv[])
 {
+    // used to uniquely identify a thread
     pthread_t newthread;
 
-    pthread_create(&newthread, NULL, myturn, NULL);
+    // start a new thread
+    pthread_create(
+        &newthread, // unique identity for thread
+        NULL,
+        myturn,     // function pointer to thread routine
+        NULL);      // arg
     yourturn();
 
     return 0;

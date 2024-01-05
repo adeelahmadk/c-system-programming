@@ -25,7 +25,13 @@ int main(int argc, char *argv[])
     pthread_t newthread;
     int v = 5;
 
-    pthread_create(&newthread, NULL, myturn, &v);
+    // start a new thread
+    pthread_create(
+        &newthread, // unique identity for thread
+        NULL,
+        myturn,     // function pointer to thread routine
+        &v          // arg
+    );
     yourturn();
 
     // wait for the thread to finish
