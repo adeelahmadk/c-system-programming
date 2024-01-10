@@ -1,7 +1,7 @@
 /**
 * Catching signals in child processes
 *
-* The program creates  a child process.  If no command-line argument is
+* The program creates a child process. If no command-line argument is
 * supplied to the program, then the child suspends its execution using
 * pause(2), to allow the user to send signals to the child. Otherwise,
 * if a command-line argument is supplied, then the child exits immediately,

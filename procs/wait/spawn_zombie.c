@@ -1,5 +1,5 @@
 /**
-* Reaping child processes
+* Spawn a zombie process
 *
 * Reference:
 * Understanding zombie processes by Jacob Sorber
