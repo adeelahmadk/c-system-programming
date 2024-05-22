@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <sys/types.h>  // definition of pid_t
-#include <unistd.h>     // defini of fork & getpid
+#include <unistd.h>     // definition of fork & getpid
 
 int main() {
     pid_t pid = fork();

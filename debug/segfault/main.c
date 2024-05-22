@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
     printf("\nlet\'s take peek at index: %d\n", d);
     index = get_value(d);
     printf("peeking: %d\n", list[index]);
+    // int *iptr = get_value(d);
+    // printf("peeking: %d\n", *iptr);
 
     return EXIT_SUCCESS;
 }

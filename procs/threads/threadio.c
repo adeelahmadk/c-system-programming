@@ -28,7 +28,7 @@ int main() {
     int buflen;
 
     pthread_create(&t, NULL, count_to_big, NULL);
-    buf = getHomePage("172.217.0.78", &buflen);
+    buf = getHomePage("44.209.252.174", &buflen); // httpbin.org
     pthread_join(t, NULL);
 
     printf("Done. Counter: %u, Received %d bytes\n", counter, buflen);
@@ -64,7 +64,7 @@ char *getHomePage(char *addr, int *bytesread) {
     // prepare the message
     //          request  path  protocol+version
     //                |    |    |
-    sprintf(sendline, "GET /get HTTP/1.1\r\n\r\n");
+    sprintf(sendline, "GET /get HTTP/1.1\r\nHost: httpbin.org\r\n\r\n");
     sendbytes = strlen(sendline);
 
     // send the request - making sure you send it all
