@@ -17,4 +17,6 @@ sudo apt install manpages-posix manpages-posix-dev
 | [File I/O](fileio/README.md) | Perform async & memory-mapped file I/O |
 | [Socket I/O](sockets/README.md) | Network programming with socket API |
 | [Security](sec/README.md) | Identify weak & vulnerable code. Try to exploit it. |
+| [Debug](debug/README.md) | Debugging and core dump analysis of compiled binaries |
+| [Isolation](isolate/README.md) | Run processes in isolation |
 
